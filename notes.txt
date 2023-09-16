@@ -100,3 +100,15 @@ npx:execute using npm (when you want things to be installed inside your project)
  --react-scripts (you can see inside package.json) is actually responsible for inserting react code into root element :)
 
  --You can remove <React.StrictMode></React.StrictMode>, your app will still run.But it's used for optimization
+
+
+ Hooks:
+ 1.useState(any default value): maintains consistancy everywhere in UI
+
+ 2.useCallback(funct, dependecies): returns memoized callback function.
+ -memoization means caching the value, so that it doesn't need to be recalculated again and again
+ -This allows us to isolate resource intensive functions so that they will not automatically run on every render.
+-useCallback only runs when one of its dependecies updates.
+-Objective is to prevent component from re-rendering unless props(properties or depenedencies) are updated.
+
+ 
