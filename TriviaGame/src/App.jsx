@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function App() {
+  const [point, setPoint] = useState(-1);
   let [permission, setPermission] = useState(false);
   let [data, setData] = useState({});
   let [question, setQuestion] = useState("");
@@ -18,6 +19,7 @@ export default function App() {
     if (ans === correctAns) {
       alert("True Answer");
       document.getElementById("answer").value = "";
+      setPoint(point+1);
     } else {
       alert(`Wrong Answer, Correct Option is :${correctAns}`);
       document.getElementById("answer").value = "";
@@ -47,8 +49,9 @@ export default function App() {
           {Items}
           </ol>
           </div>
+          <div>Points: {point}</div>
+
       </div>
-      <div></div>
       <br />
       <button
         id="btn"
@@ -64,7 +67,6 @@ export default function App() {
       >
         START
       </button>
-      <code>{console.log(data)}</code>
     </>
   );
 }
