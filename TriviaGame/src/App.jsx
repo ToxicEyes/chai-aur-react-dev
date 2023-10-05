@@ -61,8 +61,8 @@ export default function App() {
           setQuestion(data.question.text);
           setCorrectAns(data.correctAnswer);
           setIncorrectAns(data.incorrectAnswers);
-          checkAns();
           setPermission(true);
+          checkAns();
         }}
       >
         START
