@@ -1,21 +1,18 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-import { createContext, useContext } from "react";
+import { useContext, createContext } from "react";
 
 export const TodoContext = createContext({
  todos: [
-  // every todo will have an id, todo(message) and a boolean check to determine whether its is completed or not.
   {
    id: 1,
-   todo: "Simple Message",
-   completed: false,
+   todo: ' Simple Todo Message ',
+   completed: false
   }
  ],
- // functions required for todo, without implementation
- addTodo : (todo)  => {},
- deleteTodo : (id) => {},
- updateTodo : (id, todo) => {},
- toggleComlete: (id) => {}
+ addTodo : (todo) => {},
+ updateTodo: (id, todo) => {},
+ deleteTodo: (id) => {},
+ toggleComplete: (id) => {}
 });
 
 export const useTodo = () => {
@@ -23,5 +20,3 @@ export const useTodo = () => {
 }
 
 export const TodoProvider = TodoContext.Provider;
-
-
